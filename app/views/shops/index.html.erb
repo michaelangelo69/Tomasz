@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<% if current_user %>
+  <ul>
+    <li><%= current_user.email %></li>
+    <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+  </ul>
+<% else %>
+  <ul>
+    <li><%= link_to "Login", 'login' %></a></li>
+    <li><%= link_to "Signup", 'signup' %></a></li>
+  </ul>
+<% end %>
+
+<h1>Sklepy:</h1>
+
+    <% @shops.each do |shop| %>
+
+        <%= shop.name %>
+        <p>Ilość produktów: X</p>
+        <%= link_to 'Zobacz', shop %>
+        <br>
+        <hr>
+        <br>
+    <% end %>
+
+    <%= link_to 'Dodaj sklep', new_shop_path %>
+
+
+<br>
+<% if !current_user %>
+    <%= render 'login' %>
+<% end %>
