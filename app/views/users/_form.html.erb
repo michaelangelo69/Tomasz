@@ -1,0 +1,10 @@
+<%= form_for(@user) do |f| %>
+  <%= f.email_field :email, :placeholder => "Email" %>
+  <%= f.password_field :password_digest, :placeholder => "Password" %>
+      <%= f.text_field :first_name, :placeholder => "first_name" %>
+  <%= f.text_field :last_name, :placeholder => "last_name" %>
+
+
+
+  <%= f.submit "Log in", class: "btn-submit" %>
+<% end %>

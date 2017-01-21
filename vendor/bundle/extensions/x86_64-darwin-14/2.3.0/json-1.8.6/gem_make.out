@@ -1,0 +1,13 @@
+current directory: /Users/karolina/Desktop/rails/login/vendor/bundle/gems/json-1.8.6/ext/json
+/Users/karolina/.rvm/rubies/ruby-2.3.0/bin/ruby -r ./siteconf20170121-50921-1wwbv5p.rb extconf.rb
+creating Makefile
+
+current directory: /Users/karolina/Desktop/rails/login/vendor/bundle/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/karolina/Desktop/rails/login/vendor/bundle/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/karolina/Desktop/rails/login/vendor/bundle/gems/json-1.8.6/ext/json
+make "DESTDIR=" install
