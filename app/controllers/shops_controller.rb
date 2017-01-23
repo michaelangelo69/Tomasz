@@ -11,7 +11,7 @@ def new
  end
 
 def show
-    @products = @shop.product.select("*").joins(:user)
+    @products = @shop.product
 
 end
 

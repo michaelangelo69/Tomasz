@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>nazwa sklepu</th>
+      <th>Data utworzenia</th>
+      <th>Cena</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.product_name %></td>
+        <td><%= product.name %></td>
+        <td><%= product.created_at %></td>
+        <td><%= product.price %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :product
+  has_many :comment
 
   validates :first_name, :last_name,
             presence: true
