@@ -1,11 +1,15 @@
 class ProductsController < ApplicationController
 before_action :set_shop
 
+
 def new
     @product = Product.new
  end
 
 def show
+    @product = Product.select("*").find(params[:id])
+    @comments = @product.comment
+    @new_comment = @product.comment.new
 end
 
  def create
@@ -21,7 +25,7 @@ end
   private
 
       def product_params
-        params.require(:product).permit(:name, :price)
+        params.require(:product).permit(:product_name, :price)
       end
 
       def set_shop

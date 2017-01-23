@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   get 'signup'  => 'users#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+  resources :products
+  resources :comments
   resources :users
      resources :shops do
-       resources :products
+       resources :products do
+        resources :comments
+        end
     end
 end

@@ -23,10 +23,10 @@
         <br>
     <% end %>
 
-    <%= link_to 'Dodaj sklep', new_shop_path %>
-
 
 <br>
 <% if !current_user %>
     <%= render 'login' %>
+<% else %>
+    <%= link_to 'Dodaj sklep', new_shop_path %>
 <% end %>

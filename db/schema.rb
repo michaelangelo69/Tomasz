@@ -11,14 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170122173415) do
+ActiveRecord::Schema.define(version: 20170123085442) do
 
-  create_table "products", force: :cascade do |t|
-    t.string   "name"
-    t.float    "price"
-    t.float    "user_trust"
+  create_table "comments", force: :cascade do |t|
+    t.string   "content"
+    t.integer  "product_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+
+  create_table "products", force: :cascade do |t|
+    t.string   "product_name"
+    t.float    "price"
+    t.float    "user_trust"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.integer  "shop_id"
     t.integer  "user_id"
   end
