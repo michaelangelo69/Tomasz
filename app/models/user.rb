@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :product
 
   validates :first_name, :last_name,
             presence: true

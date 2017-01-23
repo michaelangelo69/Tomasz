@@ -1,4 +1,6 @@
 class ShopsController < ApplicationController
+before_action :set_shop, only: [:show]
+
 
 def index
     @shops = Shop.all
@@ -7,6 +9,11 @@ end
 def new
     @shop = Shop.new
  end
+
+def show
+    @products = @shop.product.select("*").joins(:user)
+
+end
 
  def create
     @shop = Shop.new(shop_params)
@@ -23,8 +30,8 @@ def new
        params.require(:shop).permit(:name)
      end
 
-     def set_project
-       @project = Project.find(params[:id])
+     def set_shop
+       @shop = Shop.find(params[:id])
      end
 
 end
