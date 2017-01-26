@@ -1,13 +1,16 @@
 class ProductsController < ApplicationController
-before_action :set_shop
+before_action :set_shop, except:[:index]
 
+def index
+    @products = Product.all
+ end
 
 def new
     @product = Product.new
  end
 
 def show
-    @product = Product.select("*").find(params[:id])
+    @product = Product.find(params[:id])
     @comments = @product.comment
     @new_comment = @product.comment.new
 end
@@ -21,6 +24,7 @@ end
       render :new
     end
  end
+
 
   private
 

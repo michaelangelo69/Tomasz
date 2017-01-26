@@ -2,8 +2,10 @@
 <% @comments.each do |comment| %>
   <% if comment.persisted? %>
     <%= comment.created_at.strftime("Dodano dnia: %m/%d/%Y o %I:%M%p") %>
+    <strong>Treść komentarza :</strong>
     <%= comment.content %>
-    <%= comment.product_id %>
+    <strong>Autor komentarza :</strong>
+    <%= comment.user.email %>
     <br><hr>
   <% end %>
 <% end %>
