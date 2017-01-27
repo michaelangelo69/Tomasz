@@ -1,10 +1,7 @@
 <%= form_for(user) do |f| %>
-  <%= f.email_field :email, :placeholder => "Email" %>
-  <%= f.password_field :password_digest, :placeholder => "Password" %>
-      <%= f.text_field :first_name, :placeholder => "first_name" %>
-  <%= f.text_field :last_name, :placeholder => "last_name" %>
-
-
-
-  <%= f.submit "Log in", class: "btn-submit" %>
+    <%= f.email_field :email, :placeholder => "Email", id:"rej-email-p" %>
+    <%= f.password_field :password_digest, :placeholder => "Hasło", id:"rej-haslo-p" %>
+    <%= f.text_field :first_name, :placeholder => "first_name", class:"field" %>
+    <%= f.text_field :last_name, :placeholder => "last_name", class:"field" %>
+    <%= f.submit "Załóż konto", class: "btn-submit", id:"sub-rej" %>
 <% end %>

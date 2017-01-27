@@ -1,5 +1,72 @@
-<h1>New User</h1>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Główna</title>
 
-<%= render 'form', user: @user %>
+		<style type="text/css">
+			#here{
+				top: 0;
+				left: 158px;
+				width: 85px;
+				}
+		</style>
+	</head>
 
-<%= link_to 'Back', users_path %>
+	<body>
+	<div id="contener">
+		<div id="header">
+			<ul>
+				<li><a href="/">Produkty</a></li>
+				<li><a href="/shops">Sklepy</a></li>
+				<li><a href="/users">Użytkownicy</a></li>
+			</ul>
+			<div id="here"></div>
+		</div>
+
+ 		<div id="right">
+            <div id="formularz_rej">
+                <p id="rej-p">rejestracja użytkownika</p></br>
+                <%= render 'form', user: @user %>
+                <a href="/shops">Wroć</a>
+            </div>
+		</div>
+
+		<div id="main">
+            <div id="left">
+                <div id="list-shop-p">lista sklepów</div>
+
+                <table class="tabelka" cellspacing="0">
+                    <tr>
+                        <td class="photo">
+                            <%= image_tag("Biedronka.jpg") %>
+                        </td>
+                        <td class="shop">biedronka</td>
+                        <td class="button">
+                            <button class="sub-pok" type="button">zobacz</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="photo">
+                            <%= image_tag("Carrefour.jpg") %>
+                        </td>
+                        <td class="shop">carrefour</td>
+                        <td class="button">
+                            <button class="sub-pok" type="button">zobacz</button>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div id="down"></div>
+		</div>
+
+		<div id="footer">
+			<div id="logo"> RoR Uniwersytet Pedagogiczny w Krakowie 2016
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
