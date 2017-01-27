@@ -28,9 +28,9 @@
  		    <div id="form-log">
                 <% if current_user %>
                     <div class ="zal">
-                      <span style="font-size:20px; ">Z</span><span>ALOGOWANY JAKO:</span><br><br>
-                      <%= current_user.email %>
-                      <%= link_to "Wyloguj", logout_path, method: "delete", style:"margin-left: 0;" %>
+                        <span style="font-size:20px; ">Z</span><span>ALOGOWANY JAKO:</span><br><br>
+                        <%= current_user.email %>
+                        <%= link_to "Wyloguj", logout_path, method: "delete", style:"margin-left: 0;" %>
                     </div>
                 <% else %>
                     <%= form_for(:session, url: login_path) do |f| %>
@@ -44,34 +44,33 @@
             </div>
 		</div>
 
-
 		<div id="main">
-				<div id="left">
+            <div id="left">
 
-					<div id="list-shop-p">Detal użytkownika</div>
+                <div id="list-shop-p">Detal użytkownika</div>
 
-                    <div style="font-size: 18px; padding: 20px;">
-					<p>
-                      <strong>Imię:</strong>
-                      <%= @user.first_name %>
-                    </p>
+                <div style="font-size: 18px; padding: 20px;">
+                <p>
+                    <strong>Imię:</strong>
+                    <%= @user.first_name %>
+                </p>
 
-                    <p>
-                      <strong>Nazwisko:</strong>
-                      <%= @user.last_name %>
-                    </p>
+                <p>
+                    <strong>Nazwisko:</strong>
+                    <%= @user.last_name %>
+                </p>
 
-                    <p>
-                      <strong>Email:</strong>
-                      <%= @user.email %>
-                    </p>
-                    </div>
+                <p>
+                    <strong>Email:</strong>
+                    <%= @user.email %>
+                </p>
+                </div>
 
-                    <%= link_to 'WRÓĆ', users_path, class:"dodaj", style:"margin-left: 20px;" %>
+                <%= link_to 'WRÓĆ', users_path, class:"dodaj", style:"margin-left: 20px;" %>
 
-				</div>
+            </div>
 
-				<div id="down"></div>
+            <div id="down"></div>
 		</div>
 
 		<div id="footer">

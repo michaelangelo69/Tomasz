@@ -28,9 +28,9 @@
  		    <div id="form-log">
                 <% if current_user %>
                     <div class ="zal">
-                      <span style="font-size:20px; ">Z</span><span>ALOGOWANY JAKO:</span><br><br>
-                      <%= current_user.email %>
-                      <%= link_to "Wyloguj", logout_path, method: "delete", style:"margin-left: 0;" %>
+                        <span style="font-size:20px; ">Z</span><span>ALOGOWANY JAKO:</span><br><br>
+                        <%= current_user.email %>
+                        <%= link_to "Wyloguj", logout_path, method: "delete", style:"margin-left: 0;" %>
                     </div>
                 <% else %>
                     <%= form_for(:session, url: login_path) do |f| %>
@@ -42,24 +42,19 @@
                     <% end %>
                 <% end %>
             </div>
-
-            <div id="form-rej">
-                <p id="rej-p">rejestracja użytkownika</p></br>
-
-            </div>
 		</div>
 
 		<div id="main">
-				<div id="left">
+            <div id="left">
 
-					<div id="list-shop-p">Dodaj nowy sklep</div>
-                    <%= render 'form', shop: @shop %>
+                <div id="list-shop-p">Dodaj nowy sklep</div>
+                <%= render 'form', shop: @shop %>
 
-                    <%= link_to 'WRÓĆ', shops_path, class:"dodaj", style:"margin-left: 20px;" %>
+                <%= link_to 'WRÓĆ', shops_path, class:"dodaj", style:"margin-left: 20px;" %>
 
-				</div>
+            </div>
 
-				<div id="down"></div>
+            <div id="down"></div>
 		</div>
 
 		<div id="footer">

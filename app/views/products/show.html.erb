@@ -14,66 +14,61 @@
 	</head>
 
 	<body>
-	<div id="contener">
-		<div id="header">
-			<ul>
-				<li><a href="/">Produkty</a></li>
-				<li><a href="/shops">Sklepy</a></li>
-				<li><a href="/users">Użytkownicy</a></li>
-			</ul>
-			<div id="here"></div>
-		</div>
+        <div id="contener">
+            <div id="header">
+                <ul>
+                    <li><a href="/">Produkty</a></li>
+                    <li><a href="/shops">Sklepy</a></li>
+                    <li><a href="/users">Użytkownicy</a></li>
+                </ul>
+                <div id="here"></div>
+            </div>
 
- 		<div id="right">
- 		    <div id="form-log">
-                <% if current_user %>
-                    <div class ="zal">
-                      <span style="font-size:20px; ">Z</span><span>ALOGOWANY JAKO:</span><br><br>
-                      <%= current_user.email %>
-                      <%= link_to "Wyloguj", logout_path, method: "delete", style:"margin-left: 0;" %>
-                    </div>
-                <% else %>
-                    <%= form_for(:session, url: login_path) do |f| %>
-                        <p id="logowanie-p">logowanie</p></br>
-                        <%= f.email_field :email, :placeholder =>"Email", id:"login-p", required:"required" %><br>
-                        <%= f.password_field :password_digest, :placeholder => "Hasło", id:"haslo-p", required:"required" %><br>
-                        <%= f.submit "Zaloguj się", class: "btn-submit", id:"sub-log" %>
-                        <%= link_to "Rejestracja", 'signup', id: "rejestracja" %></a>
+            <div id="right">
+                <div id="form-log">
+                    <% if current_user %>
+                        <div class ="zal">
+                           <span style="font-size:20px; ">Z</span><span>ALOGOWANY JAKO:</span><br><br>
+                           <%= current_user.email %>
+                           <%= link_to "Wyloguj", logout_path, method: "delete", style:"margin-left: 0;" %>
+                        </div>
+                    <% else %>
+                        <%= form_for(:session, url: login_path) do |f| %>
+                            <p id="logowanie-p">logowanie</p></br>
+                            <%= f.email_field :email, :placeholder =>"Email", id:"login-p", required:"required" %><br>
+                            <%= f.password_field :password_digest, :placeholder => "Hasło", id:"haslo-p", required:"required" %><br>
+                            <%= f.submit "Zaloguj się", class: "btn-submit", id:"sub-log" %>
+                            <%= link_to "Rejestracja", 'signup', id: "rejestracja" %></a>
+                        <% end %>
                     <% end %>
-                <% end %>
+                </div>
             </div>
 
-            <div id="form-rej">
-                <p id="rej-p">rejestracja użytkownika</p></br>
+            <div id="main">
+                <div id="left" style="position: relative;">
 
+                    <div style="position: absolute; top 150px; right: 50px; font-size: 50px;">
+                        <%= @product.price %>zł
+                    </div>
+
+                    <div id="list-shop-p"><%= @product.product_name %></div>
+
+                    <div style="padding: 20px;">
+                        <big><big><strong>Nazwa sklepu: </strong>
+                        <%= @product.shop.name %></big></big><br><br>
+
+                        <%= render 'comment' %><br>
+
+                        <%= link_to 'WRÓĆ', shops_path, class:"dodaj" %>
+                </div>
+
+                <div id="down"></div>
             </div>
-		</div>
 
-		<div id="main">
-				<div id="left" style="position: relative;">
-
-				<div style="position: absolute; top 150px; right: 50px; font-size: 50px;">
-				    <%= @product.price %>zł
-				</div>
-
-					<div id="list-shop-p"><%= @product.product_name %></div>
-
-					<div style="padding: 20px;">
-  <big><big><strong>Nazwa sklepu: </strong>
-  <%= @product.shop.name %></big></big><br><br>
-
-  <%= render 'comment' %><br>
-
-<%= link_to 'WRÓĆ', shops_path, class:"dodaj" %>
-</div>
-
-				<div id="down"></div>
-		</div>
-
-		<div id="footer">
-			<div id="logo"> RoR Uniwersytet Pedagogiczny w Krakowie 2016
-			</div>
-		</div>
-	</div>
+            <div id="footer">
+                <div id="logo"> RoR Uniwersytet Pedagogiczny w Krakowie 2016
+                </div>
+            </div>
+        </div>
 	</body>
 </html>

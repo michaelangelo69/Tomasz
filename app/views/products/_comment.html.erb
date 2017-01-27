@@ -1,20 +1,20 @@
 <%= form_for [@shop, @product, @new_comment] do |f| %>
-  <p>
-    <%= f.text_area :content, style:"resize: vertical; width: 100%;" %>
-  </p><br>
-  <p>
-    <%= f.submit "Dodaj komentarz", class:"sub-pok" %>
-  </p>
+    <p>
+        <%= f.text_area :content, style:"resize: vertical; width: 100%;" %>
+    </p><br>
+    <p>
+        <%= f.submit "Dodaj komentarz", class:"sub-pok" %>
+    </p>
 
-<h3>Komentarze</h3>
-<% @comments.each do |comment| %>
-  <% if comment.persisted? %>
-    <%= comment.created_at.strftime("Dodano dnia: %m/%d/%Y o %I:%M%p") %><br>
-    <strong>Autor komentarza: </strong>
-    <%= comment.user.email %><br>
-    <strong>Treść komentarza :</strong><br>
-    <%= comment.content %>
-    <br><hr>
-  <% end %>
-<% end %>
+    <h3>Komentarze</h3>
+    <% @comments.each do |comment| %>
+        <% if comment.persisted? %>
+            <%= comment.created_at.strftime("Dodano dnia: %m/%d/%Y o %I:%M%p") %><br>
+            <strong>Autor komentarza: </strong>
+            <%= comment.user.email %><br>
+            <strong>Treść komentarza :</strong><br>
+            <%= comment.content %>
+            <br><hr>
+            <% end %>
+        <% end %>
 <% end %>

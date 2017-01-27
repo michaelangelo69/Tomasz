@@ -42,44 +42,38 @@
                     <% end %>
                 <% end %>
             </div>
-
-            <div id="form-rej">
-                <p id="rej-p">rejestracja użytkownika</p></br>
-
-            </div>
 		</div>
 
 		<div id="main">
-				<div id="left">
+            <div id="left">
 
-					<div id="list-shop-p">lista produktów</div>
+                <div id="list-shop-p">lista produktów</div>
 
-					<table class="tabelka" cellspacing="0">
-                        <thead>
-    <tr>
-      <th>Nazwa produktu</th>
-      <th>Nazwa sklepu</th>
-      <th>Data utworzenia</th>
-      <th>Cena</th>
-      <th>Dodany przez</th>
-    </tr>
-  </thead>
+                <table class="tabelka" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Nazwa produktu</th>
+                            <th>Nazwa sklepu</th>
+                            <th>Data utworzenia</th>
+                            <th>Cena</th>
+                            <th>Dodany przez</th>
+                        </tr>
+                    </thead>
 
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.product_name %></td>
-        <td><%= product.shop.name %></td>
-        <td><%= product.created_at %></td>
-        <td><%= product.price %></td>
-        <td><%= product.user.email %></td>
-      </tr>
-    <% end %>
-  </tbody>
-					</table>
-				</div>
-
-				<div id="down"></div>
+                    <tbody>
+                        <% @products.each do |product| %>
+                            <tr>
+                                <td><%= product.product_name %></td>
+                                <td><%= product.shop.name %></td>
+                                <td><%= product.created_at %></td>
+                                <td><%= product.price %></td>
+                                <td><%= product.user.email %></td>
+                            </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+            <div id="down"></div>
 		</div>
 
 		<div id="footer">
