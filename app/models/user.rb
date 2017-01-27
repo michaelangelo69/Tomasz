@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   has_many :comment
 
   validates :first_name, :last_name,
-            presence: true
+    presence: true
   validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i,
                               message: "should be in right format" }
   validates :email, uniqueness: true

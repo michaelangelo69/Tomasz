@@ -27,6 +27,5 @@ before_action :set_product
       params.require(:comment).permit(:content)
     end
 
-
 end
 
