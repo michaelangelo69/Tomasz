@@ -74,6 +74,7 @@
                     </table>
 
                     <% if current_user %>
+                        <small><%= link_to 'EDYTUJ SKLEP', edit_shop_path(@shop), class:"dodaj", style:"margin-left: 20px;" %></small><br>
                         <small><%= link_to 'DODAJ NOWY PRODUKT', new_shop_product_path(@shop), class:"dodaj", style:"margin-left: 20px;" %></small>
                         <br><br>
                     <% end %>

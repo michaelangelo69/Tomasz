@@ -1,8 +1,20 @@
 class ShopsController < ApplicationController
-before_action :set_shop, only: [:show]
+before_action :set_shop, only: [:show, :edit,:update]
 
 def index
   @shops = Shop.all
+end
+
+def edit
+
+end
+
+def update
+  if @shop.update_attributes(shop_params)
+    redirect_to shops_path, notice: 'Shop was succesfully updated.'
+  else
+    render :edit
+  end
 end
 
 def new
