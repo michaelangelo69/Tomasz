@@ -1,0 +1,94 @@
+p {
+	margin: 0;
+	padding: 0;
+}
+#login-i, #haslo-i, #rej-email-i, #rej-login-i, 
+#rej-haslo-i, #rej-haslo-rep-i{
+	width: 150px;
+	height: 20px;
+	font-size: 16px;
+}
+#poszukiwanie-i{
+	margin-top: 20px;
+	margin-right: 22px;
+	width: calc(100% - 280px);
+	margin-left: 20px;
+	height: 24px;
+	font-size: 16px;
+}
+#rej-p, #logowanie-p, #login-p{
+	margin: 20px 0 0 20px;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+#rej-login-p, #rej-email-p, #haslo-p, 
+#rej-haslo-p, #rej-haslo-rep-p{
+	margin: 10px 0 0 20px;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+#sub-rej, #sub-log {
+	margin: 20px 0 0 20px;	
+	background: RGB(140,0,20);
+	font-size: 12px;
+	width: 150px;
+}
+#sub-poszukiwanie{
+	margin-left: 0px;	
+	background: #062f52;
+	font-size: 15px;
+	width: 200px;
+}
+#sub-rej, #sub-log, #sub-poszukiwanie{
+	height: 30px;
+	color: #FFF;
+	text-align: center;
+	text-transform: uppercase;
+	border: none;
+}
+
+#rej-email-p:first-letter, #sub-rej:first-letter, 
+#rej-haslo-p:first-letter, #rej-haslo-rep-p:first-letter, 
+#rej-p:first-letter, #rej-login-p:first-letter, 
+#logowanie-p:first-letter, #login-p:first-letter, 
+#haslo-p:first-letter, #sub-com:first-letter, 
+#rejestracja:first-letter, #right a:link, #right a:visited, #right a:hover,
+.dodaj:link, .dodaj:visited{
+	font-size: 150%;
+}
+#rejestracja, #right a:link, #right a:visited, #right a:hover
+.dodaj:link, .dodaj:visited {
+	display: block;
+	margin: 15px 0 0 20px;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #0058ff;
+}
+#rejestracja:hover, #right a:hover{
+	color: #00F;
+}
+#sub-log:hover, #sub-rej:hover{
+	background:  #F00;
+}
+#sub-poszukiwanie:hover{
+	background:  #4040ff;
+}
+
+#form-rej{display: none;}
+
+#login-p {
+	font-size: 12px;
+}
+
+#haslo-p, #login-p {
+    border-radius: 0;
+    border: 1px solid #a9a9a9;
+    padding: 5px 10px;
+    width: 140px;
+}
+
+.zal {
+    padding: 20px;
+}

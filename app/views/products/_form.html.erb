@@ -1,6 +1,6 @@
 <%= form_for [ @shop, @product ] do |f| %>
-  <%= f.text_field :product_name, :placeholder => "Name" %>
-  <%= f.text_field :price, :placeholder => "Price" %>
+  <%= f.text_field :product_name, :placeholder => "Nazwa produktu", class:"field" %>
+  <%= f.text_field :price, :placeholder => "Cena", class:"field" %>
 
-  <%= f.submit "Add product!", class: "btn-submit" %>
-<% end %>
+  <%= f.submit "Dodaj produkt", class: "btn-submit", class:"sub-pok", style:"margin-left: 20px;" %>
+<% end %><br>
