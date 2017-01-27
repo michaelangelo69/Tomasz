@@ -3,18 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="34648448-8a25-4558-a85f-2a637fe8b99d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/_comment.html.erb" afterPath="$PROJECT_DIR$/app/views/products/_comment.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/products/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/index.html.erb" afterPath="$PROJECT_DIR$/app/views/products/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/new.html.erb" afterPath="$PROJECT_DIR$/app/views/products/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/show.html.erb" afterPath="$PROJECT_DIR$/app/views/products/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shops/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/shops/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shops/index.html.erb" afterPath="$PROJECT_DIR$/app/views/shops/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shops/new.html.erb" afterPath="$PROJECT_DIR$/app/views/shops/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shops/show.html.erb" afterPath="$PROJECT_DIR$/app/views/shops/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
     </list>
     <ignored path="login.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,7 +92,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="users_and_login" />
+        <entry key="$PROJECT_DIR$" value="lists" />
       </map>
     </option>
   </component>
@@ -636,7 +624,13 @@
       <option name="project" value="LOCAL" />
       <updated>1485481859593</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Poprawa wcięć.">
+      <created>1485501460516</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1485501460516</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -707,7 +701,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'comments' of https://github.com/Karolaa/rails into lists&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
     <MESSAGE value="Połączenie frontów z backendem." />
-    <option name="LAST_COMMIT_MESSAGE" value="Połączenie frontów z backendem." />
+    <MESSAGE value="Poprawa wcięć." />
+    <option name="LAST_COMMIT_MESSAGE" value="Poprawa wcięć." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
